@@ -38,9 +38,13 @@ require('creeptalk')({
 
 ## Languages
 
-Language packs are simply json modules, with each 'group' consisting of a string
-or an array of potential phrases. Empty groups result in nothing being
-displayed, while an array causes a random phrase to be selected.
+Language packs are simply javascript objects that form key/value pairs. The key
+is the group itself (with most groups matching Creep functions). The value can
+be a-
+
+* string - This will be used directly each time it's called.
+* array - A random entry from the array will be used.
+* function - The results of the function will be used.
 
 
 ## Contributing Language Packs
